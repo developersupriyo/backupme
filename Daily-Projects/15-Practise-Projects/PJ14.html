@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Demo</title>
+<style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex-wrap: wrap;
+}
+.count{
+    background-color: #000;
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    width: auto;
+    padding: 0 30px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+button{
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 10px 20px;
+    margin: 20px;
+}
+</style>
+</head>
+<body>
+    <button onclick=" decreaseMe()">-</button>
+    <div class="count" id="Countme">0</div>
+    <button onclick=" increaseMe()">+</button>
+<script>
+let countN = 1 ;
+
+function increaseMe(){
+    document.getElementById("Countme").innerHTML=countN;
+    countN=countN+1;
+}
+function decreaseMe(){
+    document.getElementById("Countme").innerHTML= countN=countN-1;
+   
+}
+
+</script>
+</body>
+</html>

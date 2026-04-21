@@ -1,0 +1,25 @@
+# Ignore compiled files
+*.o
+*.exe
+*.class
+
+# Ignore logs
+*.log
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore build directories
+/dist/
+/build/
+
+# Ignore environment files
+.env
