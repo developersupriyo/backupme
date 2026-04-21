@@ -2,6 +2,7 @@
 *.o
 *.exe
 *.class
+.git
 
 # Ignore logs
 *.log

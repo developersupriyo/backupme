@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo-Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Teko:wght@300..700&display=swap');
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90vh;
+        position: relative;
+        align-items: center;
+        font-size: 40px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* background-color: #000; */
+    }
+    #txt{
+        font-size: 180px;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 900;
+        /* color: rgba(255, 255, 255, 0.989); */
+    }
+    button{
+        cursor: pointer;
+        margin: 10px;
+        padding: 10px 30px;
+        font-size: large;
+        font-weight: 700;
+        border: 1px dotted #000;
+        background-color: #fff;
+        border-radius: 16px;
+    }
+    .colorText{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+        width: 700px;
+        height: 100px;
+        background-color: #000;
+        color: #fff;
+        border-radius: 16px;
+    }
+    .fa-rotate-right:cl{
+        transform: rotate(350deg);
+        transition: 0.9s linear;
+        
+    }
+    .offline{
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        height: 400px;
+        background-color: rgb(17, 119, 119);
+        color: #fff;
+        font-weight: 600;
+        border-radius: 16px;
+        position: absolute;
+        font-size: 30px;
+        display: none;
+    }
+    .fa-wifi{
+        padding-right: 10px;
+    }
+</style>
+<body>
+    <div class="colorText">Background-color</div>
+    <button><i class="fa-solid fa-rotate-right"></i></button>
+    <div class="offline"><i class="fa-solid fa-wifi"></i>You are Offline!</div>
+
+<script>
+            
+    function randomInt(){
+        return Math.floor(Math.random() * 1780)
+    }
+    function clickMe(){
+        let X = randomInt();
+        document.querySelector("body").style.backgroundColor = "#"+ X;
+        document.querySelector(".colorText").innerHTML = "Background Colour :"+ "#"+X;
+        console.log(X);
+    }
+    document.querySelector("button").addEventListener("click", clickMe)
+
+
+    let onl = navigator.onLine;
+    if(onl===false){
+        document.querySelector(".offline").style.display = "flex";
+    };
+
+</script>
+</body>
+</html>

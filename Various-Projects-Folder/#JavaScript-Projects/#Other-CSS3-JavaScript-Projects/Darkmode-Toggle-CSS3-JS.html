@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-Mode</title>
+<style>
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: #efe6e6;
+    color: #000;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    box-shadow: 3px 3px  #b4b2b26e;
+}
+.switch{
+    width: 60px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+}
+input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    background-color: #ccc;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+.slider:before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    left: 4px;
+    top: 2px;
+    border-radius: 50%;
+    transition: 0.4s;    
+}
+input:checked + .slider{
+    background-color: green;
+}
+input:checked + .slider:before{
+     -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+p{
+    padding: 30px;
+}
+.dark-mode{
+    background-color: #000;
+}
+.dark-card{
+    background-color: #00000071;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+    <div class="card">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste ab obcaecati saepe, dolore voluptas minus provident quod quam libero fugiat quae dolor dolorem consequatur eum repellat esse pariatur fuga rem?</p>
+        <div class="box">
+        <label class="switch">
+            <input type="checkbox" onclick="darkMode(), darkCard()">
+            <span class="slider"></span>
+        </label>
+    </div>
+    </div>
+<script>
+    function darkMode(){
+        let element = document.body;
+        element.classList.toggle("dark-mode")       
+    }
+</script>    
+</body>
+</html>

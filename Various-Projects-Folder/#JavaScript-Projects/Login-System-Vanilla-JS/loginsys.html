@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>LoginSys</title>
+    <link rel="stylesheet" href="loginsys.css">
+</head>
+<body>
+    <div class="container">
+        <div class="blurGd" id="blurGd">
+        <div class="logbox" id="loginboxx">
+            <div class="input-box">
+            <p>UserName</p>
+            <input type="text" required id="user" autocomplete="off" placeholder="username">
+            <p>Password</p>
+            <input type="password" required id="pass" placeholder="username1234" >
+            <p id="passVissible" onclick="passwordToggle()"><i class="fa-solid fa-eye-slash"></i></p>
+        </div>
+            <button id="btn" onclick="loginUser()">Login</button>
+            <p id="noticePass">Invalid Password !</p>
+        </div>
+    </div>
+        <div class="logout">
+            <div class="welcome">
+            <p>Hi,😊</p>
+            <p id="profileName">Unknown</p>
+        </div>
+            <button onclick="afterlogin()">logout</button>
+        </div>
+    </div>
+    <script src="loginsys.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>tempConverter</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap');
+*{
+    font-family: "poppins",Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #e0dddd;
+}
+.card{
+    width: 338px;
+    height: 316px;
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+input{
+width: 220px;
+height: 27px;
+padding: 7px;
+margin: 10px 10px 30px 10px;
+}
+.plchd{
+    position: absolute;
+    top: 88px;
+    left: 95px;
+    font-size: 15px;
+    color: #000;
+    pointer-events: none;
+    transition: 0.4s;
+}
+input:focus + .plchd,
+input:valid + .plchd
+{
+    transform: translateY(-17px);
+    font-size: 10px;
+    background-color: #fff;
+    padding: 0 4px;
+}
+button{
+    background-color: rgb(65, 161, 251);
+    border: none;
+    border-radius: 5px;
+    padding: 7px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+button:hover{
+    background-color: #000;
+    cursor: pointer;
+}
+/* #display{
+    background-color: #e0dddd;
+    width: 221px;
+    height: 48px;
+    border-radius: 13px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 39px;
+    padding: 9px;
+    font-weight: 600;
+} */
+
+#display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-top: 25px;
+    background: #c6c2c2;
+    border-radius: 13px;
+    font-size: 27px;
+}
+#display input{
+    width: 100px;
+    background: #c6c2c2;
+    border: none;
+    pointer-events: none;
+    margin-top: 25px;
+    display: flex;
+    text-align: end;
+    font-size: 25px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <input type="number" id="fData">
+        <div class="plchd">Type Fahrenheit (F)</div>
+        <button class="convert">Convert to *C</button>
+        <div id="display"><input type="number" id="cData"> *C</div>
+    </div>
+</div>
+
+
+
+
+<!--------------JavaScript------------------>
+<script>
+const fData = document.querySelector("#fData");
+const cData = document.querySelector("#cData");
+const click = document.querySelector(".convert")
+
+function cal(){
+    cData.value = ((fData.value - 32)*5/9).toFixed(3);
+}
+click.addEventListener("click",cal);
+
+fData.addEventListener("keypress", (e)=>{if(e.key == "Enter"){
+    e.preventDefault();
+    click.click();
+}})
+
+</script>
+</body>
+</html>

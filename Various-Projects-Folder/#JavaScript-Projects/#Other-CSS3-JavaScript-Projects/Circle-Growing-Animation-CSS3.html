@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live-Animation</title>
+<style>
+body{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eae6e6;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.circle,.circle2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    margin: 40px;
+}
+.circle2{background-color: rgb(16, 167, 16);}
+
+.circle::before,.circle2::before{
+    content: '';
+    background-color: rgba(255, 0, 0, 0.248);
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    padding: 10px;
+    animation: live 1s linear infinite;
+}
+.circle2::before{background-color: rgba(24, 223, 24, 0.416);}
+@keyframes live {
+    0%{padding: 2px 7px;}
+    25%{padding: 4px 9px;}
+    50%{padding: 6px 11px;}
+    75%{padding: 8px 13px;}
+    100%{padding: 10px 15px;}   
+}
+
+</style>
+</head>
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle2"></div>
+    <div class="circle2"></div>
+    <div class="circle2"></div>
+    <div class="circle2"></div>
+    <div class="circle2"></div>
+    <div class="circle2"></div>
+    <div class="circle2"></div>
+    <div class="circle2"></div>
+</body>
+</html>

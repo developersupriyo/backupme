@@ -1,0 +1,93 @@
+.work-numberDate .work-values .yrd-exp::after{
+    content: "21+";
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    animation: count 4s ;
+}
+@keyframes count {
+    0%{
+        content: "0+";        
+    }
+    10%{
+        content: "4+";        
+    } 
+    20%{
+        content: "8+";        
+    } 
+    30%{
+        content: "10+";        
+    }
+    40%{
+        content: "12+";        
+    } 
+    50%{
+        content: "14+";        
+    } 
+    60%{
+        content: "16+";        
+    } 
+    70%{
+        content: "18+";        
+    } 
+    80%{
+        content: "20+";        
+    } 
+    100%{
+        content: "21+";        
+    }  
+    
+}
+.work-numberDate .work-values .wrk-vlu::after{
+    content: "6+";
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    animation: count2 4s ;
+}
+@keyframes count2 {
+    0%{
+        content: "1+";
+    }
+    20%{
+        content: "2+";
+    }
+    40%{
+        content: "3+";
+    }
+    70%{
+        content: "4+";
+    }
+    90%{
+        content: "5+";
+    }
+    100%{
+        content: "6+";
+    }
+    
+}
+.work-numberDate .work-values .lan-knwn::after{
+    content: "5+";
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    animation: count3 4s ;
+}
+@keyframes count3 {
+    0%{
+        content: "1+";
+    }
+    20%{
+        content: "2+";
+    }
+    40%{
+        content: "3+";
+    }
+    70%{
+        content: "4+";
+    }
+    90%{
+        content: "5+";
+    }
+    
+}

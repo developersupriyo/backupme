@@ -1,0 +1,86 @@
+@media screen and (max-width: 1010px){
+    .smlook{
+        position: relative;
+    }
+    .smlook .smimglogo img {
+        display: none;
+    }
+    .dashboardSection .smlook{
+        flex-direction: column-reverse;
+        /* padding: 10px 0; */
+    }
+    .smimglogo .smSpc {
+        position: absolute;
+        top: 30px;
+        left: 43px;
+        font-size: 33px;
+    }
+    .smimglogo .handShake{
+        left: 227px;
+        top: 0;
+    }
+    .transaction-form{
+        margin: 90px;
+    }
+    
+}
+@media screen and (max-width: 459px){
+    .transaction-form{
+        padding: 0px 44px 122px 44px;
+    }
+    .transaction-form img {
+        width: 220px;     
+    }
+    .smimglogo .smSpc {
+        font-size: 24px;
+        left: 9px;
+        top: 10px;
+    }
+    .smimglogo .smSpc {
+        font-size: 24px;
+        background-color: #328e6e;
+        color: #fff;
+        border-radius: 9px;
+        padding: 3px 8px;
+    }
+    .smimglogo .handShake {
+        left: 167px;
+        top: 0;
+    }
+    .summary {
+        position: absolute;
+        top: 600px;
+        z-index: 20;
+        left: 0;
+        padding: 0 50px;
+    }
+    nav ul{
+        display: none;
+    }
+    .dashboardSection .smlook{
+        height: 98vh;
+    }
+    .floatingLogout {
+        border-radius: 9px;
+        width: 85%;
+        right: 27px;
+        /* display: flex; */
+    }
+    .wrapfloat{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 70vh;
+
+    }
+    .transactions-list, .chart-section{
+        height: 46vh;
+    }
+    .wrapAll{
+        padding: 0 20px;
+    }
+    .footer{
+        font-size: 10px;
+    }
+
+}

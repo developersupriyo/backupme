@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candle</title>
+<style>
+    :root{
+        --flame:rgb(209, 158, 64);
+        --Dflame: rgb(241, 85, 12);
+    }
+body{
+    background-color: #000;
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-flow: column;
+    height: 93vh;
+}
+.candleDflame{
+    width: 37px;
+    height: 70px;
+    border-radius: 50% 50% 30% 30%;
+    background-color: var(--Dflame);
+    filter: blur(10px);
+    animation: change 2s ease-in-out infinite;
+}
+@keyframes change{
+    0%{filter: blur(8px);}
+    50%{filter: blur(10px);}
+    100%{filter: blur(15px);}
+    
+}
+.candleFlame{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50px;
+    height: 100px;
+    background-color: var(--flame);
+    border-radius: 50% 50% 30% 30%;
+    filter: blur(1px);
+    animation: move 2s ease-in-out infinite;
+}
+@keyframes move {
+    0%{width: 50px;height: 90px;transform: rotateZ(1deg)}
+    50%{width: 40px;height: 100px;}
+    100%{width: 50px;height: 90px;transform: rotateZ(1deg)}
+    
+}
+.candleBody{
+    width: 50px;
+    height: 336px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 42px;
+}
+.candleBody:after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    height: 20px;
+    width: 50px;
+    border-radius: 50px;
+    background: radial-gradient(rgb(226, 95, 34), rgb(168, 117, 23), rgb(255, 149, 18), rgb(112, 49, 3));
+    transform: rotateX(55deg);
+    box-shadow: insert 2px 3px 4px rgba(0, 0, 0, 0.2), insert -2px -3px 4px rgba(0, 0, 0, 0.2);
+}
+
+</style>
+</head>
+<body>
+    <div class="candleFlame">
+        <div class="candleDflame"></div>
+    </div>
+    <div class="candleBody"></div>
+</body>
+</html>

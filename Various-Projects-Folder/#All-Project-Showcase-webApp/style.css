@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Strike&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Poppins";
+}
+.nav{
+    background-color: #9130b4;
+    color: #fff;
+    padding: 20px;
+    font-size: 25px;
+    display: flex;
+    /* position: relative; */
+    /* text-align: center; */
+    justify-content: center;
+    font-weight: 600;
+}
+body{
+    background-color: rgb(229, 224, 224);
+    height: 100vh;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 84vh;
+}
+button{
+    padding: 20px 40px;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 9px;
+    border: 1px solid #616161;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #9130b4;
+    color: #fff;
+}
+.ftr{
+    display: flex;
+    background-color: rgb(43, 40, 40);
+    padding: 17px;
+    color: #fff;
+    font-weight: 600;
+    justify-content: center;
+    /* margin-top: 71vh; */
+}
+.ftr a{
+    color: #d4b4b4;
+    /* padding: 0 100px; */
+    display: flex;
+    position: absolute;
+    right: 40px;
+
+}
+.fa-arrow-up-right-from-square{
+    padding: 4px;
+}
+@media screen and (max-width: 976px){
+    button {
+        padding: 16px 19px;
+        margin: 8px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+}
+@media screen and (max-width: 608px){
+    button {
+        padding: 11px 13px;
+        margin: 5px;
+        font-size: 16px;
+    }
+    .ftr{
+        font-size: 13px;
+    }
+    .ftr a{
+        right: 10px;
+    }
+
+}

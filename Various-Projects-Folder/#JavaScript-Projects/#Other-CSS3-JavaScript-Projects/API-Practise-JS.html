@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console-Log</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center;height: 100vh; width: 100%; font-size: 50px;">OPEN CONSOLE</div>
+    <script>
+        fetch("https://dummyjson.com/products").then(
+        response => response.json()
+        ).then(
+           x => console.log(x.products[3])
+        )
+
+        // async function hello() {
+//     const url = 'https://dummyjson.com/products'
+//     const res = await fetch(url)
+//     const data = res.json();
+//     data.then(x =>{
+//         console.log(x.products); 
+//     });
+// }
+// hello()
+
+// for(var i=0; i<10;i++){
+//     const url = 'https://dummyjson.com/products'
+//     fetch(url).then(res => res.json())
+//     .then(data => console.log(data.products));
+    
+// }
+
+// fetch('https://dummyjson.com/products')
+// .then(res => res.json())
+// .then(console.log);
+    </script>
+</body>
+</html>
